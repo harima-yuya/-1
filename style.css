@@ -1,0 +1,636 @@
+@charset "UTF-8";
+/*
+GENERAL STYLING
+==============================================================*/
+html {
+    font-size: 100%;
+}
+
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+/*
+COMMON
+===============================================================*/
+.wrapper{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4% ;
+    text-align: 1.7;
+}
+
+@media screen and (max-width: 750px){
+    .wrapper{
+        margin: 0 1%;
+    }
+}
+
+
+
+/*btn*/
+.btn{
+    display: block;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+
+}
+.btn-caunseling{
+    background: #f49414;
+    color: #fff;
+    border: none;
+}
+
+.btn-caunseling:hover{
+    background: #f5ce9b
+}
+
+.btn-download{
+    background: #fff;
+    color: #000;
+    border: 1px solid rgb(204, 202, 202);
+}
+
+.title{
+    text-align: center;
+}
+
+/*
+BARNER
+===================================================================*/
+
+.barner{
+    position: sticky;
+    top: 80%;
+    z-index: 3;
+}
+.barner-item{
+    position: absolute;
+    right: 0;
+}
+.barner-img{
+    height: 100px;
+    width: auto;
+}
+
+
+/*
+HEADER
+=============================================================*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    max-width: 1500px;
+}
+.logo{
+    height: 20px;
+    width: 180px;
+    position: relative;
+    top: 1.5rem;
+    left: 1rem;
+}
+.menu-nav{
+    display: flex;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    margin-top: 0;
+}
+.menu-nav-list{
+    display: flex;
+}
+
+.menu-nav-item{
+    margin: 0 1.5rem;
+    
+}
+.menu-nav-item span{
+    display: block;
+    font-size: .5rem;
+    margin: 0 auto;
+}
+
+.menu-nav-link{
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+   
+.menu-nav-list .btn-caunseling{
+    font-size: .75rem;
+    padding: 10px 15px;
+    width: 180px;
+    height: 40px;
+}
+
+
+
+.home-bg{
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+    background-size: auto 650px;
+    background-position: 0 0;
+
+}
+@media screen and (max-width: 1080px){
+    .header{
+        background: #fff;
+        height: 40px;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .home-bg{
+        background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
+        background-size: 100%;
+        background-position: 50% 40px;
+    }
+    .logo{
+        height: 18px;
+        width: 140px;
+        position: relative;
+        top: 15px;
+        left: 5px;
+    }
+}
+
+
+.menu-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background: rgba(250, 250, 250, 0);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+  /*三本線*/
+  .menu-line{
+    position: relative;
+    top: 12px;
+    width: 30px;
+    height: 3px;
+    background: #000;
+  }
+  .menu-line::before,
+  .menu-line::after{
+      position: relative;
+      content: "";
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: #000;
+      /*transition: 0.3s;*/
+  }
+  .menu-line::before{
+      top: -8px;
+  }
+  .menu-line::after{
+      bottom: -7px;
+  }
+
+  /*OPEN時スタイル*/
+  .menu-btn.is-open .menu-line{
+    background: transparent;
+}
+.menu-btn.is-open .menu-line::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.menu-btn.is-open .menu-line::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+@media screen and (min-width: 1080px) {
+    .menu-btn {
+        display: none;
+  }
+}
+
+/*----------------------------------------
+	menu-nav
+----------------------------------------*/
+
+
+      
+         
+@media screen and (max-width: 1079px) {
+    .menu-nav {
+      display: none;
+      position: fixed;
+      top: 61px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 50px 20px;
+      background: rgba(10, 10, 10, 0.5);
+      text-align: center;
+      overflow-y: auto;
+    }
+    .menu-nav-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-nav-link{
+        position: relative;
+    }
+
+
+      
+    .menu-nav-link {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        font-weight: bold;
+      }
+    .menu-nav-link span{
+        color:#f49414 ;
+    }
+    
+
+}
+
+
+
+/*
+MAIN
+===================================================================*/
+
+/*actual-results*/
+
+.actual-results-title{
+    width: 540px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+
+}
+
+.actual-results-img{
+    display: flex;
+    justify-content: space-between;
+    width: 540px;
+    padding-top: 20px;
+}
+    
+.actual-results-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.actual-results-btn .btn-caunseling{
+    padding: 1rem 3rem;
+    margin:1rem 1rem 1rem 0;
+}
+
+.actual-results-btn .btn-download{
+    padding: 1rem 2rem;
+    margin:1rem;
+}
+.actual-results-precaution{
+    font-size: .5rem;
+    color: rgb(148, 147, 147);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 750px){
+    .actual-results{
+       padding-top: 500px;
+        width: 100%;
+        height: auto;
+    }
+    .actual-results-title{
+       text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 25px;
+        width: auto;
+    }
+    .actual-results-img{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        width: auto;   
+    }
+    .actual-results-img-1,
+    .actual-results-img-3{
+        width: 25%;
+        height: auto; 
+    }
+    .actual-results-img-2{
+        width: 45%;
+        height: auto;
+    }
+    .actual-results-btn{
+        display: block;
+    }
+     
+    .actual-results-btn .btn-download{
+        display: none;
+    }
+    .actual-results-btn .btn-caunseling{
+        width: 100% ;
+    }
+    .actual-results-precaution{
+        width: 100%;
+    }
+}
+
+/*pr*/
+
+.pr-container{
+    background-color: #f49414;
+    padding: 50px;
+}
+.pr{
+    display: flex;
+    justify-content: space-between;
+}
+.pr-text{
+    color: #fff;
+}
+.pr-mv{
+    width: 50%;    
+}
+.pr-text-title{
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.pr-text{
+    padding: 2rem;
+}
+
+.pr-text a{
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    margin-top: 1.5m;
+    position: relative;
+    font-weight: bold;
+}
+
+.pr-text a::before{
+    content: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/about/arrow-icon.svg);
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width: 750px){
+    .pr-container{
+        top: 700px;
+        margin-top: 400px;
+        padding: 2rem 0 ;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .pr{
+        display: block;
+    }
+    .pr-mv{
+        width: 100%;  
+        
+    }
+    .pr-text{
+        padding: 0;
+    }
+}
+
+/*potepan-charastic*/
+
+.potepan-charastic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.potepan-charastic-title{
+    margin-top: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+.potepan-charastic-subtitle{
+    text-align:center ;
+}
+
+.pptepan-charastic-decorate{
+    background: #f49414;
+    width: 50px;
+    height: 5px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 750px){
+    .potepan-charastic{
+        padding: 0rem;
+    }
+}
+
+/*ポテパンの特徴１〜５の共通設定*/
+.potepan-charastic-num{
+    margin: 50px;
+    background: #FCFAF5;
+    color: #f49414;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    width: 80px;
+    height: 80px;
+    padding-top: 10px;
+    margin-bottom: -90px;
+    z-index: 2;
+    border-radius: 50% ;
+    
+}
+.potepan-charastic-wrapper{
+    background: #FCFAF5;
+    max-width: 1600px;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    z-index: 1;
+}
+@media screen and (max-width: 750px){
+    .potepan-charastic-num{
+        margin-bottom: -60px;
+    }
+}
+
+
+
+/*ポテパンの特徴１の設定*/
+
+.potepan-charastic1-title{
+    margin-top: 30px;
+}
+.potepan-charastic1-text{
+    padding: 1rem;
+    text-align: center;
+}
+
+.potepan-charastic1-text strong{
+    font-size: 1.5rem;
+    color: #f49414;
+}
+
+.potepan-charastic1-text span,
+.potepan-charastic1-text-precaution{
+    font-size: .5rem;
+    color: rgb(148, 147, 147)
+}
+
+.potepan-charastic1-text-precaution{
+    margin-bottom: 30px;
+}
+
+.potepan-charastic1-pie_chart{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.potepan-charastic1-pie_chart img{
+    max-width: 45%;
+}
+.potepan-charastic1-carrer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.potepan-charastic1-carrer h3{
+    display: inline;
+    text-align: center;
+    border-bottom: #f49414 5px solid;
+}
+.potepan-charastic1-carrer-img{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.potepan-charastic1-carrer-img img{
+    max-width: 48%;
+    height: auto;
+}
+
+@media screen and (max-width: 750px){
+    .potepan-charastic1-pie_chart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .potepan-charastic1-pie_chart img{
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .potepan-charastic1-carrer-img{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .potepan-charastic1-carrer-img img{
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+.potepan-charastic1-exsample{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    background: #fff;
+}
+
+.potepan-charastic1-exsample h3{
+    border-bottom: #f49414 5px solid;
+    margin-bottom: 3rem;
+
+}
+.potepan-charastic1-exsample h3::after{
+    content:"";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/success-stories/potepanda.jpg);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.potepan-charastic1-exsample-voice{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.potepan-charastic1-exsample-item{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 20px;
+}
+.potepan-charastic1-exsample-item img{
+    height: 60px;
+    width: 60px;
+}
+.potepan-charastic1-exsample-item label{
+    color: black;
+    font-size: 1rem;
+}
+.potepan-charastic1-exsample-item label:hover {
+    color: #f5ce9b;
+}
+.potepan-charastic1-exsample-item{
+    position: relative;
+}
+.potepan-charastic1-exsample-item::after{
+    content: ">";
+    color: #f49414;
+    position: absolute;
+    top: 40%;
+    right: 0;
+}

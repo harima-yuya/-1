@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ポテパンキャンプ-Webエンジニア排出No1プログラミングスクール</title>
+        <meta name="description" content=ポテパンキャンプ-Webエンジニア排出No1プログラミングスクール>
+    <!--favicon-->
+        <link rel="icon" type="image/svg+xml" href="https://mng-camp.potepan.com/favicon.ico">
+   
+    <!--CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+              //メニューボタンがクリックされた時
+              $('.menu-btn').on('click',function(){
+                
+                //"is-open" classがついているかどうかを expanded に格納
+                const expanded = $(this).hasClass('is-open');
+                //ボタンテキストのDOMを$btnTxtに格納
+                const $btnTxt = $('.menu-text');
+                //メニューのDOMを格納
+                const $gnav = $('.menu-nav');
+        
+                //もし expanded が falseだったら（メニューが非表示）
+                if(!expanded){
+                  $(this).addClass('is-open'); //'is-open' classを追加
+                  $btnTxt.text('Close'); //ボタンテキストを'Close'に変更
+                  $gnav.slideDown(); //メニューを表示
+                //もし expanded が trueだったら（メニューが展開済）
+                }else {
+                  $(this).removeClass('is-open'); //'is-open' classを削除
+                  $btnTxt.text('Menu'); //ボタンテキストを'Menu'に変更
+                  $gnav.slideUp(); //メニューを非表示
+                }
+              });
+            });
+          </script>
+    </head>
+
+<body>
+    <div class="barner">
+        <a href="https://camp.potepan.com/contact" class="barner-item"><img class="barner-img" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/fixed-footer/counseling-button.png.webp" alt="無料カウンセリングはこちらから"></a>
+    </div>
+
+    <div class="home-bg" >
+        <header class="header">
+            <a href="potepan-task1.html"><img class="logo" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo-sp.png.webp" " alt="logo"></a>
+            <button type="button" class="menu-btn">
+                <span class="menu-line"></span>
+            </button>
+            <nav class="menu-nav">
+                <ul class="menu-nav-list">
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="https://camp.potepan.com/content">contet<span>学習内容</span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="https://camp.potepan.com/interview">interview<span>受講生の声</span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="https://camp.potepan.com/faq">faq<span>よくある質問</span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="https://camp.potepan.com/recruit">recruit<span>採用企業様へ</span></a></li>
+                    <li class="menu-nav-item"><a class="menu-nav-link" href="https://camp.potepan.com/download">document<span>資料請求</span></a></li>
+                    <li class="menu-nav-item"><a class="btn btn-caunseling " href="https://camp.potepan.com/contact">無料カウンセリング</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="wrapper actual-results">
+            <h1 class="actual-results-title">最短5ヶ月間で<br>未経験からWebエンジニアへ</h1>
+            <div class="actual-resulrts-img">
+                <img class="actual-results-img-1" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/100percent@2x.svg" alt="">
+                <img class="actual-results-img-2" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/no1@2x.svg" alt="">
+                <img class="actual-results-img-3" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/refund@2x.svg" alt="">
+            
+            </div>  
+            <div class="actual-results-btn">
+                <a class="btn btn-caunseling" href="https://camp.potepan.com/contact">無料カウンセリングはこちら</a>
+                <a class="btn btn-download" href="https://camp.potepan.com/download">資料請求はこちら</a>
+            </div>   
+                
+            
+            <div class="actual-results-precaution">
+                <p>※1: ショッパーズアイ「プログラミングスクール10社を対象にしたサイト比較イメージ調査（2020 年 5 月 22 日～25 日）」より全国の22～49歳の男女691名へのインターネット調査</p>
+                <p>※2: 29歳以下の転職サポート実施ユーザ（2021年7月~10月）</p>
+                <p>※3: 返金の条件については利用規約をご参照ください</p>
+            </div>   
+        </section>
+    
+    </div>
+
+       
+       
+    <div class="pr-container">
+        <section class="pr wrapper">
+            <video class="pr-mv" src="https://res.cloudinary.com/hqt02ldfz/video/upload/v1650946041/IntroductionMovie/PotepanCamp/movie_sxheh6.mp4" poster="https://res.cloudinary.com/hqt02ldfz/image/upload/v1650946026/IntroductionMovie/PotepanCamp/thumbnail_retspb.jpg" controls="" playsinline="" preload="none" muted="" autoplay=""></video>
+            <div class="pr-text">
+                <h2 class="pr-text-title">POTEPAN CAMPとは</h2>
+                <p>ポテパンキャンプは、Web系開発現場で通用するスキルを身につけるための
+                    教育プログラムです。実践的でわかりやすいカリキュラムと適切な学習サポートで効率的に学習できる環境を用意しております。
+                </p>
+                <a href="https://camp.potepan.com/content">　学習内容はこちら</a>
+            </div>
+        </section>
+
+    </div>
+    
+
+        
+        
+</body>
+</html>
+
